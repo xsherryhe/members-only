@@ -1,0 +1,23 @@
+<h2>New Post</h2>
+
+<%= form_with model: @post, method: :post do |form| %>
+  <div class="field">
+    <%= form.label :title, 'Title:' %><br />
+    <%= form.text_field :title, size: 50 %>
+    <% @post.errors.full_messages_for(:title).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+  <div class="username">
+    <%= form.label :username, 'Author:' %>
+    <%= current_user.username %>
+  </div>
+  <div class="field">
+    <%= form.label :body, 'Post:' %><br />
+    <%= form.text_area :body, size: '41x10' %>
+    <% @post.errors.full_messages_for(:body).each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+  <%= form.submit 'Submit' %>
+<% end %>
