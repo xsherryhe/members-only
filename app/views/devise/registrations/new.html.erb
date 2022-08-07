@@ -13,15 +13,28 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <p class="reg-constraint"><em>
-    <% if @minimum_password_length %>
-      <%= @minimum_password_length %> characters minimum, 
-    <% end %>
-    must contain at least 1 of each: uppercase letter, lowercase letter, digit, symbol</em>
-    </p><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="password-with-constraints">
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+    <div class="reg-constraint focus-box">
+      Password must conform to the following requirements:
+      <ul>
+        <% if @minimum_password_length %>
+          <li><%= @minimum_password_length %> characters minimum</li>
+        <% end %>
+        <li>
+          Must contain at least 1 of each:
+            <ul>
+              <li>Uppercase letter</li>
+              <li>Lowercase letter</li>
+              <li>Digit</li>
+              <li>Symbol</li>
+            </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="field">
