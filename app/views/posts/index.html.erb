@@ -7,11 +7,21 @@
     <div>Want to join the clubhouse? <%= link_to 'Sign Up', new_user_registration_path %></div>
     <div>Already a member? <%= link_to 'Sign In', new_user_session_path %></div>
   <% end %>
+
+  <div class="sort-select">
+    <p>Sort by:</p>
+    <%= form_with method: :get do |form| %>
+      <%= form.select :sort, 
+          [['Newest to Oldest', 'new'], ['Oldest to Newest', 'old']], 
+          { selected: @sort },
+          { onchange: 'this.form.submit()' } %>
+    <% end %>
+  </div>
 </header>
 
 <h2>Members Only! Posts</h2>
 <% if user_signed_in? %>
-  <div><%= link_to 'Write a new post', new_post_path %></div>
+  <div><%= link_to 'Write A New Post', new_post_path %></div>
 <% end %>
 
 <% @posts.each do |post| %>

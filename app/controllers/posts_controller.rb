@@ -16,7 +16,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order(created_at: :desc)
+    @sort = params[:sort]
+    @posts = @sort == 'old' ? Post.order(created_at: :asc) : Post.order(created_at: :desc)
   end
 
   private
