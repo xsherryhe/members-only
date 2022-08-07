@@ -1,50 +1,53 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="password-with-constraints">
+<div class="registrations-new">
+  <%= link_to 'Back to Posts', '/', class: 'back-link' %>
+  <h2>Sign up</h2>
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.label :username %>
+      <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
     </div>
-    <div class="reg-constraint focus-box">
-      Password must conform to the following requirements:
-      <ul>
-        <% if @minimum_password_length %>
-          <li><%= @minimum_password_length %> characters minimum</li>
-        <% end %>
-        <li>
-          Must contain at least 1 of each:
-            <ul>
-              <li>Uppercase letter</li>
-              <li>Lowercase letter</li>
-              <li>Digit</li>
-              <li>Symbol</li>
-            </ul>
-        </li>
-      </ul>
+  
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
-  </div>
+  
+    <div class="password-with-constraints">
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+      <div class="reg-constraint focus-box">
+        Password must conform to the following requirements:
+        <ul>
+          <% if @minimum_password_length %>
+            <li><%= @minimum_password_length %> characters minimum</li>
+          <% end %>
+          <li>
+            Must contain at least 1 of each:
+              <ul>
+                <li>Uppercase letter</li>
+                <li>Lowercase letter</li>
+                <li>Digit</li>
+                <li>Symbol</li>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

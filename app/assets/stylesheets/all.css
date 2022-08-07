@@ -3,6 +3,28 @@
   font-size: 0.9rem;
 }
 
+label {
+  display: block;
+}
+
+h2 {
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+.back-link {
+  font-size: 0.85rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .reg-constraint ul {
   padding-left: 1rem;
 }
@@ -19,9 +41,40 @@
 .password-with-constraints:focus-within .focus-box {
   display: block;
   height: 0;
-  width: 30rem;
 }
 
 .field-with-errors {
   display: inline;
+}
+
+.registrations-new {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.registrations-new form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.registrations-new .field {
+  display: flex;
+  flex-direction: column;
+}
+
+.registrations-new input {
+  box-sizing: border-box;
+  height: 1.8rem;
+  width: 15rem;
+  padding: 0.1rem;
+  outline: none;
+}
+
+.registrations-new .actions {
+  margin-top: 1rem;
 }

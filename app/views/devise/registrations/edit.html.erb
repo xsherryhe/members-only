@@ -4,8 +4,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="username">
-    <%= f.label :username %><br />
-    <%= current_user.username %><br />
+    <%= f.label :username %>
+    <p><%= current_user.username %></p>
     <p class="reg-constraint"><em>You cannot change your username.</em></p>
   </div>
 
@@ -21,7 +21,7 @@
   <div class="password-with-constraints">
     <div class="field">
       <%= f.label :password %> <p class="reg-constraint"><em>(leave blank if you don't want to change it)</em></p>
-      <%= f.password_field :password, autocomplete: "new-password" %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
     <div class="reg-constraint focus-box">
       Password must conform to the following requirements:
@@ -43,7 +43,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
