@@ -14,13 +14,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password %><br />
     <p class="reg-constraint"><em>
-    (<% if @minimum_password_length %>
+    <% if @minimum_password_length %>
       <%= @minimum_password_length %> characters minimum, 
     <% end %>
-    must contain at least 1 of each: uppercase letter, lowercase letter, digit, symbol )</em>
-    </p>
+    must contain at least 1 of each: uppercase letter, lowercase letter, digit, symbol</em>
+    </p><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 

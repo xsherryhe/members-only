@@ -1,4 +1,9 @@
 .reg-constraint {
+  display: inline;
   margin: 0;
   font-size: 0.9rem;
+}
+
+.field-with-errors {
+  display: inline;
 }

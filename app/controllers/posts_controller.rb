@@ -9,14 +9,14 @@ class PostsController < ApplicationController
     @post = Post.new(post_params.merge(user_id: current_user.id))
 
     if @post.save
-      redirect_to posts_path
+      redirect_to '/'
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
   end
 
   private
