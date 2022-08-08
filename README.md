@@ -3,4 +3,4 @@ This project is an "exclusive clubhouse" website that requires authentication in
 
 The project demonstrates various concepts and functions related to authentication, sessions, and cookies, including controller filters and usage of the Devise gem.
 
-This project is currently in progress.
+Run this project [here](https://still-mesa-94893.herokuapp.com/).
