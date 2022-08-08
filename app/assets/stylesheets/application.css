@@ -12,6 +12,8 @@
  *
  *= require normalize.css
  *= require all.css
+ *= require form.css
  *= require devise.css
+ *= require posts.css
  *= require_self
  */

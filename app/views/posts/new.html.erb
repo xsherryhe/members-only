@@ -1,25 +1,26 @@
-<h2>New Post</h2>
-
-<%= form_with model: @post, method: :post do |form| %>
-  <div class="field">
-    <%= form.label :title, 'Title:' %><br />
-    <%= form.text_field :title, size: 50 %>
-    <% @post.errors.full_messages_for(:title).each do |message| %>
-      <p><%= message %></p>
-    <% end %>
-  </div>
-  <div class="username">
-    <%= form.label :username, 'Author:' %>
-    <%= current_user.username %>
-  </div>
-  <div class="field">
-    <%= form.label :body, 'Post:' %><br />
-    <%= form.text_area :body, size: '41x10' %>
-    <% @post.errors.full_messages_for(:body).each do |message| %>
-      <p><%= message %></p>
-    <% end %>
-  </div>
-  <%= form.submit 'Submit' %>
-<% end %>
-
-<%= link_to 'Back', '/' %>
+<div class="view form posts posts-new">
+  <%= link_to 'Back to Posts', '/', class: 'back-link' %>
+  <h2>New Post</h2>
+  
+  <%= form_with model: @post, method: :post do |form| %>
+    <div class="field">
+      <%= form.label :title, 'Title:' %>
+      <%= form.text_field :title %>
+      <% @post.errors.full_messages_for(:title).each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+    <div class="username">
+      <%= form.label :username, 'Author:' %>
+      <strong><%= current_user.username %></strong>
+    </div>
+    <div class="field">
+      <%= form.label :body, 'Post:' %>
+      <%= form.text_area :body %>
+      <% @post.errors.full_messages_for(:body).each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+    <%= form.submit 'Post it!' %>
+  <% end %>
+</div>

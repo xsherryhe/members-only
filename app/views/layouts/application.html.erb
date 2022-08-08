@@ -11,9 +11,13 @@
   </head>
 
   <body>
-    <% flash.each do |name, message| %>
-      <p class="<%= name %>"><%= message %></p>
-    <% end %>
-    <%= yield %>
+    <div class="content">
+      <div class="flash">
+        <% flash.each do |name, message| %>
+          <p class="<%= name %>"><%= message %></p>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

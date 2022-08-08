@@ -1,13 +1,55 @@
+:root {
+  --secondary-color: rgb(0, 136, 255);
+  --site-font: monospace;
+}
+
+html {
+  font-size: 14px;
+}
+
 * {
   box-sizing: border-box;
 }
 
-h2, h3, p {
+body {
+  background-color: var(--secondary-color);
+  font-family: var(--site-font);
+  font-size: 1rem;
+}
+
+.content {
+  margin: auto;
+  width: 85vw;
+  min-height: 110vh;
+  padding-top: 4rem;
+  background-color: white;
+}
+
+.flash {
+  margin: auto;
+  width: 80%;
+  color: var(--secondary-color);
+}
+
+.view {
+  margin: auto;
+  width: 80%;
+}
+
+h2, h3, h4, h5, p {
   margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
 }
 
 a {
   color: black;
+}
+
+a:hover {
+  color: var(--secondary-color);
 }
 
 .back-link {

@@ -1,0 +1,62 @@
+.posts-new textarea {
+  min-height: 35vh;
+}
+
+.posts-new input[type="submit"] {
+  margin-top: 0.6rem;
+  width: 8rem;
+  height: 2rem;
+  align-self: flex-end;
+}
+
+.posts-index {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.posts-index header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts-index .sort-select {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.posts-index .user-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.posts-index .body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.posts-index .posts {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.posts-index .post {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: var(--secondary-color) solid 0.1rem;
+}
+
+.posts-index .post-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.posts-index .post-body {
+  margin-top: 1rem;
+}

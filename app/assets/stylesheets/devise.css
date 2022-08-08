@@ -1,36 +1,7 @@
-.devise {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5rem;
-  margin-top: 3rem;
-  gap: 1rem;
-}
-
-.devise label {
-  display: block;
-}
-
 .devise .links {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-}
-
-.devise form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.devise .field {
-  display: flex;
-  flex-direction: column;
-}
-
-.devise input {
-  height: 1.8rem;
-  padding: 0.1rem;
-  outline: none;
 }
 
 .devise input {
@@ -51,9 +22,9 @@
 
 .registrations-edit input,
 button {
-  height: 1.8rem;
+  height: 2.2rem;
   padding: 0.1rem;
-  width: 25rem;
+  width: 28rem;
 }
 
 .devise .actions {
@@ -73,7 +44,7 @@ button {
 
 .devise .reg-constraint {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .devise .reg-constraint ul {
